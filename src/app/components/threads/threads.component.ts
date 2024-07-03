@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { ThreadItemComponent } from '../thread-item/thread-item.component';
 import { Router } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { ThreadsService } from '../threads.service';
-import { Thread } from '../models/thread';
+import { ThreadsService } from '../../services/threads.service';
+import { Thread } from '../../models/thread';
 import { LayoutBarComponent } from '../layout-bar/layout-bar.component';
 import { debounceTime, distinctUntilChanged, Subject } from 'rxjs';
 
@@ -38,12 +38,11 @@ export class ThreadsComponent implements OnInit {
   }
 
   setupSearch() {
-    this.searchSubject.pipe(
-      debounceTime(300),
-      distinctUntilChanged()
-    ).subscribe(query => {
-      this.searchThreads(query);
-    });
+    this.searchSubject
+      .pipe(debounceTime(300), distinctUntilChanged())
+      .subscribe((query) => {
+        this.searchThreads(query);
+      });
   }
 
   onSearchInput(event: any) {

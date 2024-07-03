@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
-import { UsersService } from '../users.service';
+import { UsersService } from '../../services/users.service';
 import { Router } from '@angular/router';
 
 @Component({

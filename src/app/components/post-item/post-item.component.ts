@@ -1,9 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Post } from '../models/post';
+import { Post } from '../../models/post';
 import { LucideAngularModule } from 'lucide-angular';
-import { UsersService } from '../users.service';
+import { UsersService } from '../../services/users.service';
 import { CommonModule } from '@angular/common';
-import { PostsService } from '../posts.service';
+import { PostsService } from '../../services/posts.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({

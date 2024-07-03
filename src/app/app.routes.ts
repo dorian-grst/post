@@ -1,12 +1,12 @@
 import { Routes, RouterModule } from '@angular/router';
-import { LoginPageComponent } from './login/login.component';
+import { LoginPageComponent } from './components/login/login.component';
 import { NgModule } from '@angular/core';
-import { ThreadsComponent } from './threads/threads.component';
-import { CreateThreadComponent } from './create-thread/create-thread.component';
-import { ThreadDetailComponent } from './thread-detail/thread-detail.component';
-import { CreatePostComponent } from './create-post/create-post.component';
-import { AuthGuard } from './auth.gard';
-import { UpdatePostComponent } from './update-post/update-post.component';
+import { ThreadsComponent } from './components/threads/threads.component';
+import { CreateThreadComponent } from './components/create-thread/create-thread.component';
+import { ThreadDetailComponent } from './components/thread-detail/thread-detail.component';
+import { CreatePostComponent } from './components/create-post/create-post.component';
+import { AuthGuard } from './guards/auth.gard';
+import { UpdatePostComponent } from './components/update-post/update-post.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginPageComponent },

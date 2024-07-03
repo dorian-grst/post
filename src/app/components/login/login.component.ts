@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { UsersService } from '../users.service';
+import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'login-page',

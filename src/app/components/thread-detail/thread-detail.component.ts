@@ -1,10 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { Thread } from '../models/thread';
-import { ThreadsService } from '../threads.service';
-import { PostsService } from '../posts.service';
-import { Post } from '../models/post';
+import { Thread } from '../../models/thread';
+import { ThreadsService } from '../../services/threads.service';
+import { PostsService } from '../../services/posts.service';
+import { Post } from '../../models/post';
 import { PostItemComponent } from '../post-item/post-item.component';
 import { CommonModule } from '@angular/common';
 import { Subscription, Subject } from 'rxjs';

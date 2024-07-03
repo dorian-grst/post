@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Thread } from './models/thread';
+import { Thread } from '../models/thread';
 import { ApiService } from './api.service';
 
 @Injectable({

@@ -2,10 +2,10 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
-import { PostsService } from '../posts.service';
-import { UsersService } from '../users.service';
+import { PostsService } from '../../services/posts.service';
+import { UsersService } from '../../services/users.service';
 import { CommonModule } from '@angular/common';
-import { Post } from '../models/post';
+import { Post } from '../../models/post';
 
 @Component({
   selector: 'update-post',
