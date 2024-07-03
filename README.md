@@ -26,19 +26,19 @@ $ npm install
 3. Navigate to the pocketbase directory and start the PocketBase server.
 
 ```sh
-cd pocketbase
+$ cd pocketbase
 ./pocketbase serve
 ```
 
 4. Open another terminal and launch your Angular App.
 
 ```sh
-ng serve
+$ ng serve
 ```
 
 5. Once the app is launched connect you with :
 ```sh
-Email : name@example.com
-Password : name@example.com
+$ Email : name@example.com
+$ Password : name@example.com
 ```
 Or you can create your own in the Pocketbase interface.
