@@ -1,0 +1,10 @@
+<button
+  (click)="onClick()"
+  class="flex h-full w-full flex-row gap-3 rounded-md border border-input bg-white hover:bg-slate-50 py-2 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+>
+  <p class="w-3/6 px-4 break-words text-left">{{ thread.name }}</p>
+  <p class="w-2/6 px-4 break-words truncate text-left">{{ thread.postCount }}</p>
+  <p class="w-2/6 px-4 break-words truncate text-left">
+    {{ thread.created | timeAgo }}
+  </p>
+</button>

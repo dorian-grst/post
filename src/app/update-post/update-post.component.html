@@ -1,0 +1,65 @@
+<main class="h-screen flex justify-center items-center bg-slate-50 px-4">
+  <div class="flex flex-col justify-center items-center gap-3 w-[300px]">
+    <h1 class="text-content font-extrabold h-9 underline">Update a post</h1>
+    <form
+      *ngIf="post"
+      class="flex flex-col gap-3 w-full"
+      #updateForm="ngForm"
+      (ngSubmit)="onUpdatePost(updateForm)"
+    >
+      <div class="flex flex-row gap-3 w-full">
+        <label class="label h-9 w-min px-4 py-2" for="title">Title</label>
+        <input
+          name="title"
+          class="input h-9 w-full px-3 py-1"
+          placeholder="I agree"
+          type="text"
+          ngModel
+          required
+          [(ngModel)]="post.title"
+        />
+      </div>
+      <div class="flex flex-col gap-3 w-full">
+        <div class="flex flex-row gap-3 w-full">
+          <label class="label h-9 w-min px-4 py-2" for="content"
+            >Description</label
+          >
+          <p
+            class="text-content h-9 text-primary/50 flex flex-row gap-2 cursor-not-allowed"
+          >
+            Write down
+            <lucide-angular
+              name="corner-right-down"
+              class="my-icon text-primary/50"
+            ></lucide-angular>
+          </p>
+        </div>
+        <textarea
+          name="content"
+          class="input h-9 w-full px-3 py-1"
+          ngModel
+          required
+          [(ngModel)]="post.content"
+        ></textarea>
+        <div *ngIf="errorMessage" class="label h-win text-red-400 px-4 py-2">
+          {{ errorMessage }}
+        </div>
+      </div>
+      <div class="flex flex-row gap-3 justify-between">
+        <button
+          (click)="onBack()"
+          class="btn w-min bg-white text-primary hover:bg-slate-100 h-9 p-2 pr-3 flex gap-2"
+        >
+          <lucide-angular name="chevron-left" class="my-icon"></lucide-angular>
+          <p>Back</p>
+        </button>
+        <button
+          type="submit"
+          class="btn w-full bg-primary/75 text-white hover:bg-primary h-9 p-2"
+        >
+          <p>Update</p>
+        </button>
+      </div>
+    </form>
+  </div>
+</main>

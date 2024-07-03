@@ -1,0 +1,40 @@
+<main class="h-screen flex justify-center items-center bg-slate-50 px-4">
+  <div class="flex flex-col justify-center items-center gap-3 w-[500px]">
+    <layout-bar class="w-full pb-[44px] gap-" />
+    <div class="flex flex-row justify-between w-full gap-3">
+      <input
+        class="input h-9 w-full px-3 py-1"
+        placeholder="Search threads"
+        [(ngModel)]="searchQuery"
+        (input)="onSearchInput($event)"
+      />
+      <button
+        (click)="onNewThread()"
+        class="btn text-white bg-primary/75 text-primary-foreground hover:bg-primary h-9 p-2 pr-3 gap-2 whitespace-nowrap"
+      >
+        <lucide-angular name="plus" class="my-icon"></lucide-angular>
+        <p>New Thread</p>
+      </button>
+    </div>
+    <div class="flex flex-row justify-between w-full gap-3">
+      <div class="text-content w-3/6 h-9 px-4 py-2 font-medium underline">
+        Subject
+      </div>
+      <div class="text-content w-2/6 h-9 px-4 py-2 font-medium underline">
+        Posts
+      </div>
+      <div class="text-content w-2/6 h-9 px-4 py-2 font-medium underline">
+        Date
+      </div>
+    </div>
+    <p
+      *ngIf="threads.length === 0"
+      class="text-content flex justify-center w-full h-9 cursor-not-allowed text-primary/50"
+    >
+      No thread for the moment.
+    </p>
+    <ng-container *ngFor="let thread of threads">
+      <thread-item class="w-full" [thread]="thread"></thread-item>
+    </ng-container>
+  </div>
+</main>

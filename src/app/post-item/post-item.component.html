@@ -1,0 +1,33 @@
+<div class="flex flex-col gap-3">
+  <div class="flex flex-row gap-3">
+    <p
+      class="text-content px-4 break-words truncate text-left h-9 font-medium w-full"
+    >
+      {{ post.title }}
+    </p>
+    <p
+      *ngIf="post.authorId !== userId"
+      class="text-content px-4 text-left h-9 font-medium w-fit"
+    >
+      {{ userEmail }}
+    </p>
+    <button
+      *ngIf="post.authorId === userId"
+      (click)="onEdit()"
+      class="btn w-min bg-white text-primary hover:bg-slate-100 h-9 p-2 flex gap-2"
+    >
+      <lucide-angular name="pen" class="my-icon"></lucide-angular>
+    </button>
+    <button
+      *ngIf="post.authorId === userId"
+      (click)="onDelete()"
+      class="btn w-min bg-white text-primary hover:bg-slate-100 h-9 p-2 flex gap-2"
+    >
+      <lucide-angular name="x" class="my-icon"></lucide-angular>
+    </button>
+  </div>
+  <p class="text-content px-4 break-words truncate text-left">
+    {{ post.content }}
+  </p>
+  <div class="text-content w-full h-9 cursor-not-allowed"></div>
+</div>

@@ -1,0 +1,53 @@
+<main class="h-screen flex justify-center items-center bg-slate-50 px-4">
+  <div class="flex flex-col justify-center items-center gap-3 w-[300px]">
+    <div class="flex flex-col justify-center items-center gap-3">
+      <h1 class="text-content font-extrabold h-9 underline">
+        Log in to your account
+      </h1>
+      <p class="text-content text-primary/50">
+        Enter your email below to sign into your account.
+      </p>
+    </div>
+    <form
+      #loginForm="ngForm"
+      (ngSubmit)="onSubmit(loginForm)"
+      class="flex flex-col gap-3 w-full"
+    >
+      <div class="flex flex-col gap-3 w-full">
+        <div class="flex flex-row gap-4">
+          <label class="label h-9 w-min px-4 py-2" for="email">Email</label>
+          <input
+            name="email"
+            class="input h-9 w-full px-3 py-1"
+            placeholder="name@example.com"
+            type="email"
+            [(ngModel)]="userEmail"
+            autocomplete="username" 
+          />
+        </div>
+        <div class="flex flex-row gap-4">
+          <label class="label h-9 w-min px-4 py-2" for="password"
+            >Password</label
+          >
+          <input
+            name="password"
+            class="input h-9 w-full px-3 py-1"
+            placeholder="*******************"
+            type="password"
+            [(ngModel)]="userPassword"
+            autocomplete="current-password"
+          />
+        </div>
+      </div>
+      <div *ngIf="errorMessage" class="label h-win text-red-400 px-4 py-2">
+        {{ errorMessage }}
+      </div>
+      <button
+        type="submit"
+        class="btn w-full text-white bg-primary/75 text-primary-foreground hover:bg-primary h-9 px-4 py-2"
+      >
+        <p>Sign in</p>
+      </button>
+    </form>
+  </div>
+</main>
