@@ -13,7 +13,7 @@
 1. Clone your project repository.
 
 ```sh
-$ git clone https://github.com/dorian-grst/post.git
+$ git clone https://github.com/kurama/post.git
 $ cd post
 ```
 
